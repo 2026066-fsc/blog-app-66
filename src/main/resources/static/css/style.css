@@ -71,12 +71,12 @@
     font-weight: 200;
 }
 
-.dictionary{
+.page_title{
     display: flex;
     justify-content: center;
     padding: 10px 30px;
 }
-.dictionary h2{
+.page_title h2{
     color: #4d4c4c;
     font-weight: 300;
 }
@@ -91,4 +91,28 @@
 }
 .detail{
     padding: 10px 30px;
+}
+
+/* 📝 ① タイトルの入力ボックスを横に広げる */
+.post-title-input {
+    width: 100%;            /* 画面（または親の箱）の横幅いっぱいに広げる */
+    padding: 15px;          /* 内側に余白を作って、上下にもふっくらさせる */
+    border: 1px solid #ccc; /* 薄いグレーの枠線 */
+    border-radius: 8px;     /* 角を少し丸くしてオシャレに */
+    box-sizing: border-box; /* paddingを足しても横幅100%からはみ出さないお守り */
+    margin-bottom: 20px;    /* 本文のボックスとの間のすき間 */
+    outline: none;          /* クリックしたときの青い枠線を消す */
+}
+
+/* 📝 ② 本文（ボディ）の入力エリアを大きめにする */
+.post-body-input {
+    width: 100%;            /* 横幅をいっぱいに広げる */
+    height: 200px;          /* 縦幅（高さ）を300pxにして、長文を書きやすくする */
+    padding: 20px;          /* 内側にゆったりとした余白を作る */
+    line-height: 1.6;       /* 行間を広げて、入力中も読みやすくする */
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    resize: vertical;       /* ユーザーが右下のつまみで「縦方向だけ」自由にサイズを広げられるようにする */
 }

@@ -11,7 +11,7 @@
 
 <body>
     <div th:replace="~{fragments/header :: layout-header}"></div>
-    <div class="dictionary"><h2>猫事典サイト</h2></div>
+    <div class="page_title"><h2>猫事典サイト</h2></div>
     <div class="big-grid">
         <div class="big-card" th:each="blog : ${blogs}">
             <a class="card-title" th:href="@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">タイトル</a>

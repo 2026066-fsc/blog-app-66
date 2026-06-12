@@ -11,10 +11,13 @@
 
     <!-- 投稿ページ -->
 
-    <div>
+    <div class="page_title"><h2>投稿ページ</h2></div>
+    <div class="post">
         <form th:action="@{/post}" method="post">
-            <input type="text" name="title" id="title">
-            <input type="text" name="body" id="body">
+            <input type="text" class="post-title-input" name="title" placeholder="タイトルを入力してください">
+            <br>
+            <textarea class="post-body-input" name="body" placeholder="本文を入力してください"></textarea>
+            <br>
             <button type="submit">投稿</button>
         </form>
     </div>
