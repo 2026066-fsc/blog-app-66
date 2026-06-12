@@ -7,16 +7,14 @@
     <title>spring</title>
     
 </head>
-
-
 <body>
     <div th:replace="~{fragments/header :: layout-header}"></div>
-    <div class="dictionary"><h2>猫事典サイト</h2></div>
-    <div class="big-grid">
-        <div class="big-card" th:each="blog : ${blogs}">
-            <a class="card-title" th:href="@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">タイトル</a>
-            <p class="card-body" th:text="${blog.body}">本文</p>
-        </div>
+    <div class="detail">
+        <h2 class="detail-title" th:text="${blog.title}">タイトル</h2>
+        <p class="detail-body" th:text="${blog.body}">本文</p>
     </div>
+    
+
+
 </body>
 </html>

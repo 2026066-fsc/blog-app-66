@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="ja" xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>post</title>
 </head>
 <body>
-    <header class="header">
-        <h1>spring</h1>
-        <div class="search">
-            <input type="text" name="search" id="searchbox">
-            <input type="button" value="send">
-        </div>
-        <div class="post">
-            <a href="/post">投稿</a>
-        </div>
-    </header>
+    <div th:replace="~{fragments/header :: layout-header}"></div>
 
     <!-- 投稿ページ -->
-    <form action="/post">
-        <input type="text" name="title" id="title">
-        <input type="text" name="text" id="text">
-        <button type="submit">投稿</button>
-    </form>
+
+    <div>
+        <form th:action="@{/post}" method="post">
+            <input type="text" name="title" id="title">
+            <input type="text" name="body" id="body">
+            <button type="submit">投稿</button>
+        </form>
+    </div>
+    <br>
+    <a href="/blogs">一覧に戻る</a>
+
+        <!-- 参考
+        <label>
+            <input type="radio" name= "hand"value="0" checked>グー
+        </label><br> -->
+    
 </body>
 </html>
